@@ -292,7 +292,7 @@ else {
   cvs.width = window.innerWidth;
   cvs.height = window.innerHeight;
   const max_width = window.innerWidth;
-  const max_hight = window.innerHeight;
+  const max_hight = 100 + "%";
   const box_w = Math.floor(window.innerWidth / 20);
   const box_h = Math.floor(window.innerHeight / 30);
   let speed = "Speed";
