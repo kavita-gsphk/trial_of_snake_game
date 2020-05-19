@@ -603,7 +603,7 @@ else {
       clearInterval(game_7);
       count++;
     }
-    if (snakeX > 12 * box_w && snakeX < 20 * box_w && snakeY == 13 * box_h) {
+    if (snakeX > 12 * box_w && snakeX < 21 * box_w && snakeY == 13 * box_h) {
       clearInterval(game);
       clearInterval(game_1);
       clearInterval(game_2);
