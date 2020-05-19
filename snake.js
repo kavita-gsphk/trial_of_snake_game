@@ -75,23 +75,23 @@ if (window.innerHeight > 510 && window.innerWidth > 510) {
     p_m_y = event.targetTouches[0].clientY;
   }
   function e(event) {
-    if (p_m_x - p_s_x > 30 && d != "left") {
-      if (p_m_y - p_s_y < 30 || p_s_y - p_m_y < 100) {
+    if (p_m_x - p_s_x >= 60 && d != "left") {
+      if (p_m_y - p_s_y < 60 || p_s_y - p_m_y < 60) {
         d = "right";
       }
     }
-    if (p_s_x - p_m_x > 30 && d != "right") {
-      if (p_m_y - p_s_y < 30 || p_s_y - p_m_y < 30) {
+    if (p_s_x - p_m_x >= 60 && d != "right") {
+      if (p_m_y - p_s_y < 60 || p_s_y - p_m_y < 60) {
         d = "left";
       }
     }
-    if (p_m_y - p_s_y > 30 && d != "up") {
-      if (p_m_x - p_s_x < 30 || p_s_x - p_m_x < 30) {
+    if (p_m_y - p_s_y >= 60 && d != "up") {
+      if (p_m_x - p_s_x < 60 || p_s_x - p_m_x < 60) {
         d = "down";
       }
     }
-    if (p_s_y - p_m_y > 30 && d != "down") {
-      if (p_m_x - p_s_x < 30 || p_s_x - p_m_x < 30) {
+    if (p_s_y - p_m_y >= 60 && d != "down") {
+      if (p_m_x - p_s_x < 60 || p_s_x - p_m_x < 60) {
         d = "up";
       }
     }
@@ -364,6 +364,9 @@ else {
   ctx.canvas.addEventListener("click", decrese);
   document.addEventListener("keydown", direction);
   document.addEventListener("touchstart", s);
+  document.addEventListener("touchmove", m);
+  document.addEventListener("touchend", e);
+  document.addEventListener("touchcancel", c);
   function direction(event) {
     let key = event.keyCode;
     if (key == 37 && d != "right") {
@@ -378,13 +381,18 @@ else {
   }
 
   function s(event) {
-    //console.log(event.touches);
     p_s_x = event.targetTouches[0].clientX;
     p_s_y = event.targetTouches[0].clientY;
   }
   function m(event) {
     p_m_x = event.targetTouches[0].clientX;
     p_m_y = event.targetTouches[0].clientY;
+  }
+  function c(event) {
+    p_m_x = event.targetTouches[0].clientX;
+    p_m_y = event.targetTouches[0].clientY;
+  }
+  function e(event) {
     if (p_m_x - p_s_x >= 60 && d != "left") {
       if (p_m_y - p_s_y < 60 || p_s_y - p_m_y < 60) {
         d = "right";
@@ -622,7 +630,7 @@ else {
     ctx.fillText(rate, 15 * box_w, 1.5 * box_h);
     if (count == 1) {
       count++;
-      popup_1 = setInterval(popup, 450);
+      // popup_1 = setInterval(popup, 450);
     }
   }
   ctx.canvas.addEventListener("click", decrese);
