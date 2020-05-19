@@ -335,7 +335,7 @@ else {
   document.addEventListener("keydown", direction);
   document.addEventListener("touchstart", s);
   document.addEventListener("touchmove", m);
-  document.addEventListener("touchend", e);
+  //document.addEventListener("touchend", e);
   //document.addEventListener("touchcancel", c);
   function direction(event) {
     let key = event.keyCode;
@@ -358,13 +358,6 @@ else {
   function m(event) {
     p_m_x = event.targetTouches[0].clientX;
     p_m_y = event.targetTouches[0].clientY;
-  }
-  /*function c(event) {
-    p_m_x = event.targetTouches[0].clientX;
-    p_m_y = event.targetTouches[0].clientY;
-  }*/
-  //console.log(touches[0].clientX);
-  function e(event) {
     if (p_m_x - p_s_x >= 60 && d != "left") {
       if (p_m_y - p_s_y < 60 || p_s_y - p_m_y < 60) {
         d = "right";
@@ -386,6 +379,33 @@ else {
       }
     }
   }
+  /*function c(event) {
+    p_m_x = event.targetTouches[0].clientX;
+    p_m_y = event.targetTouches[0].clientY;
+  }*/
+  //console.log(touches[0].clientX);
+  /* function e(event) {
+    if (p_m_x - p_s_x >= 60 && d != "left") {
+      if (p_m_y - p_s_y < 60 || p_s_y - p_m_y < 60) {
+        d = "right";
+      }
+    }
+    if (p_s_x - p_m_x >= 60 && d != "right") {
+      if (p_m_y - p_s_y < 60 || p_s_y - p_m_y < 60) {
+        d = "left";
+      }
+    }
+    if (p_m_y - p_s_y >= 60 && d != "up") {
+      if (p_m_x - p_s_x < 60 || p_s_x - p_m_x < 60) {
+        d = "down";
+      }
+    }
+    if (p_s_y - p_m_y >= 60 && d != "down") {
+      if (p_m_x - p_s_x < 60 || p_s_x - p_m_x < 60) {
+        d = "up";
+      }
+    }
+  }*/
   function collision(head, array) {
     for (let i = 0; i < array.length; i++) {
       if (head.x == array[i].x && head.y == array[i].y) {
