@@ -365,23 +365,23 @@ else {
   }*/
   //console.log(touches[0].clientX);
   function e(event) {
-    if (p_m_x - p_s_x >= 100 && d != "left") {
-      if (p_m_y - p_s_y < 100 || p_s_y - p_m_y < 100) {
+    if (p_m_x - p_s_x >= 60 && d != "left") {
+      if (p_m_y - p_s_y < 60 || p_s_y - p_m_y < 60) {
         d = "right";
       }
     }
-    if (p_s_x - p_m_x >= 100 && d != "right") {
-      if (p_m_y - p_s_y < 100 || p_s_y - p_m_y < 100) {
+    if (p_s_x - p_m_x >= 60 && d != "right") {
+      if (p_m_y - p_s_y < 60 || p_s_y - p_m_y < 60) {
         d = "left";
       }
     }
-    if (p_m_y - p_s_y >= 100 && d != "up") {
-      if (p_m_x - p_s_x < 100 || p_s_x - p_m_x < 100) {
+    if (p_m_y - p_s_y >= 60 && d != "up") {
+      if (p_m_x - p_s_x < 60 || p_s_x - p_m_x < 60) {
         d = "down";
       }
     }
-    if (p_s_y - p_m_y >= 100 && d != "down") {
-      if (p_m_x - p_s_x < 100 || p_s_x - p_m_x < 100) {
+    if (p_s_y - p_m_y >= 60 && d != "down") {
+      if (p_m_x - p_s_x < 60 || p_s_x - p_m_x < 60) {
         d = "up";
       }
     }
