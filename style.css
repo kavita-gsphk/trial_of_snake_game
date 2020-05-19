@@ -2,7 +2,63 @@
   padding: 0;
   margin: 0;
   color: white;
+  font-size: 12px;
 }
+
+@media screen and (min-width: 500px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 570px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media screen and (min-width: 620px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 680px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 860px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 920px) {
+  html {
+    font-size: 21px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  html {
+    font-size: 22px;
+  }
+}
+
 @media screen and (min-width: 1100px) {
   body {
     background-image: url("img/background_1.jpg");
@@ -27,4 +83,69 @@ body {
 }
 canvas {
   display: block;
+}
+.popup {
+  background-color: rgba(0, 0, 0, 0.479);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  z-index: 30;
+  opacity: 1;
+}
+.popup-hidden {
+  display: none;
+}
+
+#content {
+  width: 19.5rem;
+  height: 9rem;
+  position: absolute;
+  transition: all 0.2s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(184, 184, 184);
+  padding: 1rem;
+  background-color: rgb(160, 160, 160);
+  border-radius: 7px;
+}
+#cancel {
+  text-align: end;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: black;
+}
+span {
+  color: black;
+}
+span:hover {
+  color: #720000;
+}
+#context {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: black;
+  font-weight: bold;
+}
+#button {
+  width: 8.2rem;
+  height: 2.2rem;
+  margin-left: 5rem;
+  background-color: rgb(22, 134, 18);
+  border-style: none;
+  font-size: 1rem;
+
+  box-shadow: 0 10px 20px rgba(155, 9, 9, 0.596);
+  border-radius: 50px;
+  cursor: pointer;
+  opacity: 1;
+}
+#button:hover {
+  background-color: rgb(29, 77, 19);
+}
+#button:active {
+  box-shadow: 0 5px 10px rgba(155, 9, 9, 0.596);
 }
