@@ -365,23 +365,23 @@ else {
   }*/
   //console.log(touches[0].clientX);
   function e(event) {
-    if (p_m_x - p_s_x > 30 && d != "left") {
-      if (p_m_y - p_s_y < 30 || p_s_y - p_m_y < 30) {
+    if (p_m_x - p_s_x >= 45 && d != "left") {
+      if (p_m_y - p_s_y < 45 || p_s_y - p_m_y < 45) {
         d = "right";
       }
     }
-    if (p_s_x - p_m_x > 30 && d != "right") {
-      if (p_m_y - p_s_y < 30 || p_s_y - p_m_y < 30) {
+    if (p_s_x - p_m_x >= 45 && d != "right") {
+      if (p_m_y - p_s_y < 45 || p_s_y - p_m_y < 45) {
         d = "left";
       }
     }
-    if (p_m_y - p_s_y > 30 && d != "up") {
-      if (p_m_x - p_s_x < 30 || p_s_x - p_m_x < 30) {
+    if (p_m_y - p_s_y >= 45 && d != "up") {
+      if (p_m_x - p_s_x < 45 || p_s_x - p_m_x < 45) {
         d = "down";
       }
     }
-    if (p_s_y - p_m_y > 30 && d != "down") {
-      if (p_m_x - p_s_x < 30 || p_s_x - p_m_x < 30) {
+    if (p_s_y - p_m_y >= 45 && d != "down") {
+      if (p_m_x - p_s_x < 45 || p_s_x - p_m_x < 45) {
         d = "up";
       }
     }
