@@ -630,7 +630,7 @@ else {
     ctx.fillText(rate, 15 * box_w, 1.5 * box_h);
     if (count == 1) {
       count++;
-      // popup_1 = setInterval(popup, 450);
+      popup_1 = setInterval(popup, 200);
     }
   }
   ctx.canvas.addEventListener("click", decrese);
