@@ -305,7 +305,12 @@ else {
   let game_6;
   let game_7;
   const ground = new Image();
-  ground.src = "img/b5.jpg";
+  if (window.innerWidth < window.innerHeight) {
+    ground.src = "img/b5.jpg";
+  }
+  if (window.innerWidth > window.innerHeight) {
+    ground.src = "img/b5.jpg";
+  }
   const plus = new Image();
   plus.src = "img/plus_1.png";
   const nag = new Image();
@@ -331,7 +336,7 @@ else {
   document.addEventListener("touchstart", s);
   document.addEventListener("touchmove", m);
   document.addEventListener("touchend", e);
-  document.addEventListener("touchcancel", c);
+  //document.addEventListener("touchcancel", c);
   function direction(event) {
     let key = event.keyCode;
     if (key == 37 && d != "right") {
@@ -354,14 +359,14 @@ else {
     p_m_x = event.targetTouches[0].clientX;
     p_m_y = event.targetTouches[0].clientY;
   }
-  function c(event) {
+  /*function c(event) {
     p_m_x = event.targetTouches[0].clientX;
     p_m_y = event.targetTouches[0].clientY;
-  }
+  }*/
   //console.log(touches[0].clientX);
   function e(event) {
     if (p_m_x - p_s_x > 30 && d != "left") {
-      if (p_m_y - p_s_y < 30 || p_s_y - p_m_y < 100) {
+      if (p_m_y - p_s_y < 30 || p_s_y - p_m_y < 30) {
         d = "right";
       }
     }
