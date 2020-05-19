@@ -321,7 +321,7 @@ else {
   const max_width = window.innerWidth;
   let count;
   count = 0;
-  let popup_1;
+  let popup_3;
   const max_hight = 100 + "%";
   const box_w = Math.floor(window.innerWidth / 20);
   const box_h = Math.floor(window.innerHeight / 30);
@@ -427,7 +427,7 @@ else {
     console.log(1);
     document.querySelector(".popup").classList.toggle("popup-hidden");
     document.querySelector("#context").innerHTML = "Your Score: " + score;
-    clearInterval(popup_1);
+    clearInterval(popup_3);
   };
   let popup_2 = () => {
     console.log(1);
@@ -630,7 +630,7 @@ else {
     ctx.fillText(rate, 15 * box_w, 1.5 * box_h);
     if (count == 1) {
       count++;
-      popup_1 = setInterval(popup, 200);
+      popup_3 = setInterval(popup, 200);
     }
   }
   ctx.canvas.addEventListener("click", decrese);
